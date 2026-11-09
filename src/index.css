@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-meridian-gold: #C5A880;
+  --color-meridian-gold-light: #DFCAAA;
+  --color-meridian-bronze: #8C6B38;
+  --color-meridian-dark: #121110;
+  --color-meridian-card-dark: #1A1816;
+  --color-meridian-surface-dark: #24211D;
+  --color-meridian-cream: #F5F2EB;
+  --color-meridian-muted: #9E9991;
+}
+
+:root {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  color-scheme: light dark;
+}
+
+h1, h2, h3, .font-editorial {
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+/* Custom scrollbar for understated luxury aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #A8A29E;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #2e2a25;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8C6B38;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #C5A880;
+}
